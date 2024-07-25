@@ -50,7 +50,11 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
-.date { margin-top: -0.5em; }
+.date {
+    color: gray;
+    font-style: italic;
+    margin-top: -0.5em;
+}
 figcaption {
     font-style: italic;
     font-weight: normal;
