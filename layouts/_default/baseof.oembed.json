@@ -10,5 +10,7 @@
     "thumbnail_url": "https://ajk.beer/post/2024/07/18/clarity/schankbier.jpeg",
     "thumbnail_width": 5712,
     "thumbnail_height": 4284,
-    "description": "{{ .Summary }}..."
+    "description": "{{ .Summary }}...",
+    "width": 600,
+    "height": 200
 }
