@@ -7,5 +7,8 @@
   "url": "{{ .Permalink }}",
   "author_name": "{{ if .Params.author }}{{ .Params.author }}{{ else }}Anonymous{{ end }}",
   "html": "<iframe src=\"{{ .Permalink }}iframe.html\" width=\"600\" height=\"200\" title=\"{{ .Title }}\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" class=\"hugo-embedded-content\"></iframe>",
-  "thumbnail_url": "https://ajk.beer/post/2024/07/18/clarity/schankbier.jpeg"
+    "thumbnail_url": "https://ajk.beer/post/2024/07/18/clarity/schankbier.jpeg",
+    "thumbnail_width": 5712,
+    "thumbnail_height": 4284,
+    "description": "{{ .Summary }}..."
 }
