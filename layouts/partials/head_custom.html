@@ -1,3 +1,7 @@
 {{ with .OutputFormats.Get "rss" -}}
   {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 {{ end }}
+{{ if not .Params.notoembed }}
+{{ "" | safeHTML }}
+<link rel="alternate" type="application/json+oembed" href="{{ .Permalink }}/oembed.json"/>
+{{ end }}
