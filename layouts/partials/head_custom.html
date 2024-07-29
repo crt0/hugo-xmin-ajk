@@ -3,5 +3,5 @@
 {{ end }}
 {{ if not .Params.notoembed }}
 {{ "" | safeHTML }}
-<link rel="alternate" type="application/json+oembed" href="{{ .Permalink }}/oembed.json"/>
+<link rel="alternate" type="application/json+oembed" href="{{ .Permalink }}oembed.json"/>
 {{ end }}
