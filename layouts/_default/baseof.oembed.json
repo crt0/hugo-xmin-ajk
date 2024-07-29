@@ -5,7 +5,7 @@
     "type": "rich",
     "title": "{{ .Title }} | {{ .Site.Title }}",
     "url": "https://ajk.beer/post/2024/07/18/clarity/",
-    "author_name": "{{ if .Params.author and .Params.author.name }}{{ .Params.author.name }}{{ else }}Anonymous{{ end }}",
+    "author_name": "{{ if Site.Params.author and Site.Params.author.name }}{{ Site.Params.author.name }}{{ else }}Anonymous{{ end }}",
     "html": "<iframe src=\"{{ .Permalink }}iframe.html\" width=\"600\" height=\"200\" title=\"{{ .Title }}\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" class=\"hugo-embedded-content\"></iframe>",
     "thumbnail_url": "https://ajk.beer/post/2024/07/18/clarity/schankbier.jpeg",
     "thumbnail_width": 5712,
