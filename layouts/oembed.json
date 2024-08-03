@@ -1,0 +1,4 @@
+{
+  "provider_name": "{{ .Site.Title }}",
+  "provider_url": "{{ .Site.BaseURL }}",
+}
