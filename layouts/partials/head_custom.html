@@ -4,7 +4,9 @@
 {{ if not .Params.notoembed }}
 {{ "" | safeHTML }}
 <meta property="og:title" content="{{ .Title }}">
-<meta property="og:image" content="{{ .Page.Permalink }}{{ .Params.key_image }}">
+{{ with or (and .Params.hero (.Resources.Get .Params.hero)) (and .Site.Params.hero (resources.Get .Site.Params.hero)) -}}
+<meta property="og:image" content="{{ (images.Filter images.AutoOrient .).Permalink }}">
+{{ end }}
 <meta property="og:description" content="{{ .Summary }}...">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <link rel="alternate" type="application/json+oembed" href="{{ .Site.BaseURL }}oembed.json">
