@@ -1,13 +1,13 @@
-{{ with .OutputFormats.Get "rss" -}}
-  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
-{{ end }}
-{{ if not .Params.notoembed }}
-{{ "" | safeHTML }}
+{{- with .OutputFormats.Get "rss" -}}
+{{- printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{- end -}}
+{{- if not .Params.notoembed -}}
+{{- "" | safeHTML -}}
 <meta property="og:title" content="{{ .Title }}">
-{{ with or (and .Params.hero (.Resources.Get .Params.hero)) (and .Site.Params.hero (resources.Get .Site.Params.hero)) -}}
+{{- with or (and .Params.hero (.Resources.Get .Params.hero)) (and .Site.Params.hero (resources.Get .Site.Params.hero)) -}}
 <meta property="og:image" content="{{ (images.Filter images.AutoOrient .).Permalink }}">
-{{ end }}
+{{- end -}}
 <meta property="og:description" content="{{ .Summary }}...">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <link rel="alternate" type="application/json+oembed" href="{{ .Site.BaseURL }}oembed.json">
-{{ end }}
+{{- end -}}
